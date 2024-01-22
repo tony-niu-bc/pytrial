@@ -1,13 +1,4 @@
 import easygui
-d =  easygui.enterbox("please input your name .")
-e = float(easygui.enterbox("house number ."))
-f = easygui.enterbox("city.")
-g = easygui.enterbox("province.")
-h = float(easygui.enterbox("postal code."))
-ho = str(d) + '\n' +  str(e) + '\n' + str(f) + '\n' + str(g) + '\n' +  str(h) 
-easygui.msgbox(ho) 
-
-import easygui
 
 mbResult = easygui.msgbox("Hello, Tintin!\nWelcome to the world of GUI")
 print("msgbox returns " + mbResult)
@@ -17,43 +8,55 @@ mbResult = easygui.msgbox("I'm a message of messagebox",
                           "I'm a title of messagebox")
 print("msgbox returns " + mbResult)
 
-import easygui
-flavor = easygui.enterbox("what is your favorite thing?")
+flavor = easygui.enterbox("what is your favorite thing?", 
+                          "Favorite Thing", 
+                          "Play Video Game")
 easygui.msgbox("your favorite thing is " + flavor)
 
-n = int(float(easygui.enterbox("please input a number")))
+n = int(float(easygui.enterbox("please input a number", 
+                               "be convert integer", 
+                               "123.123")))
 print(n)
 
-o = float(easygui.enterbox("please input a number"))
+o = float(easygui.enterbox("please input a float number", 
+                           "Float", 
+                           "99.99"))
 print(o)
 
-import easygui 
 flavor = easygui.enterbox("what is your favorite game?",
-                           default = "zelda")
+                          default = "zelda")
 easygui.msgbox("your entered " + flavor)
 
-f = float (easygui.enterbox("please input a fahrenheit"))
+f = float (easygui.enterbox("please input a fahrenheit", 
+                            default = "37.5"))
 c = (5 / 9 )* (f - 32)
-easygui.msgbox("it was" + str(c))
+easygui.msgbox("celsius was: " + str(c))
 
-import easygui
-d =  easygui.enterbox("please input your name .")
-e = float(easygui.enterbox("house number ."))
-f = easygui.enterbox("city.")
-g = easygui.enterbox("province.")
-h = float(easygui.enterbox("postal code."))
+d = easygui.enterbox("please input your name: ", 
+                     "First name", 
+                     "Tintin")
+e = int(easygui.enterbox("please input your house number: ", 
+                         "House Number", 
+                         "123"))
+f = easygui.enterbox("please input your city: ", 
+                     "City", 
+                     "Vancouver")
+g = easygui.enterbox("please input your province: ", 
+                     "Province", 
+                     "BC")
+h = easygui.enterbox("please input your postal code: ", 
+                     "Postal Code", 
+                     "A1B 2C3")
+
 easygui.msgbox("your name is "             + str(d) + 
                " , your house number is "  + str(e) + 
                " ,your city is "           + str(f) + 
                " ,your province is "       + str(g) + 
                " and your postal code is " + str(h) + 
-               " .")
+               ".")
 
-import easygui
-d =  easygui.enterbox("please input your name .")
-e = float(easygui.enterbox("house number ."))
-f = easygui.enterbox("city.")
-g = easygui.enterbox("province.")
-h = float(easygui.enterbox("postal code."))
-ho = d + '/n' + e + '/n' + f + '/n' + g + '/n' + h +'/n'
-easygui.msgbox(ho) 
+easygui.msgbox(str(d) + '\n' +  
+               str(e) + '\n' + 
+               str(f) + '\n' + 
+               str(g) + '\n' +  
+               str(h))
